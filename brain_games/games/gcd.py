@@ -15,7 +15,7 @@ def check_answer(number_1, umber_2, answer, name):
         return False
 
 
-def play_game():
+def play_gcd():
     print('Welcome to the Brain Games!')
     user_name = utils.get_name()
     print(f'Hello, {user_name}!')
