@@ -1,15 +1,15 @@
 from brain_games.games import utils
 
 
-def check_answer(number_1, umber_2, answer, name):
-    if utils.find_gcd(number_1, number_2) == answer:
+def check_answer(number_1, number_2, answer, name):
+    if str(utils.find_gcd(number_1, number_2)) == answer:
         print("Correct!")
         return True
 
     else:
         print(
             f"'{answer}' is the wrong answer ;(. Correct answer was "
-            f"{utils.find_gcd(number_1, number_2}. \nLet's try again, " 
+            f"'{utils.find_gcd(number_1, number_2)}'. \nLet's try again, " 
             f"{name}!"
         )
         return False
