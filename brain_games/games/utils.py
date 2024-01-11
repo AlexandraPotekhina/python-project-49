@@ -25,3 +25,19 @@ def find_gcd(number_1, number_2):
         else:
             number_2 = number_2 % number_1
     return number_1 + number_2
+
+
+
+def generate_progression():
+    regression = [random.randint(1, 10)]
+    rand_num = random.randint(1, 5)
+
+    for i in range(11):
+        regression.append(regression[i] + rand_num)
+
+    missing_number = random.choice(regression)
+    index = regression.index(missing_number)
+    regression[index] = '..'
+
+    return (regression, missing_number)
+
