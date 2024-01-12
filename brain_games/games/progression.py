@@ -9,7 +9,7 @@ def check_answer(number, answer, name):
     else:
         print(
             f"'{answer}' is the wrong answer ;(. Correct answer was "
-            f"'{number}'. \nLet's try again, " 
+            f"'{number}'. \nLet's try again, "
             f"{name}!"
         )
         return False

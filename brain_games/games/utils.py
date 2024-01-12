@@ -8,7 +8,7 @@ def get_name():
 
 
 def get_answer():
-    return prompt.string(f"Your answer: ")
+    return prompt.string("Your answer: ")
 
 
 def generate_num():
@@ -26,7 +26,6 @@ def find_gcd(number_1, number_2):
         else:
             number_2 = number_2 % number_1
     return number_1 + number_2
-
 
 
 def generate_progression():
@@ -52,4 +51,3 @@ def is_prime(number):
             return False
 
     return True
-

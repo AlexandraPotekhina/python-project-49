@@ -8,7 +8,7 @@ def create_random_expr():
     right_num = utils.random.randint(1, 10)
     return f"{left_num} {op} {right_num}"
 
-  
+
 def eval_expr(expression):
     left_num, op, right_num = expression.split()
 
@@ -30,23 +30,23 @@ def check_expression(result, answer, name):
 
     else:
         print(
-            f"{answer} is the wrong answer ;(. Correct answer was " 
-            f"{result}. \nLet's try again, {name}!"
+            f"'{answer}' is the wrong answer ;(. Correct answer was "
+            f"'{result}'. \nLet's try again, {name}!"
         )
         return False
 
 
 def play_calc():
-    print('Welcome to the Brain Games!')
+    print("Welcome to the Brain Games!")
     user_name = utils.get_name()
-    print(f'Hello, {user_name}!')
-    print('What is the result of the expression?')
+    print(f"Hello, {user_name}!")
+    print("What is the result of the expression?")
     win_game = True
 
     for i in range(3):
         expression = create_random_expr()
         print(f"Question: {expression}")
-        user_answer = int(utils.prompt.string(f"Your answer: "))
+        user_answer = int(utils.prompt.string("Your answer: "))
 
         if not check_expression(eval_expr(expression), user_answer, user_name):
             win_game = False

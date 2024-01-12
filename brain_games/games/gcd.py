@@ -9,7 +9,7 @@ def check_answer(number_1, number_2, answer, name):
     else:
         print(
             f"'{answer}' is the wrong answer ;(. Correct answer was "
-            f"'{utils.find_gcd(number_1, number_2)}'. \nLet's try again, " 
+            f"'{utils.find_gcd(number_1, number_2)}'. \nLet's try again, "
             f"{name}!"
         )
         return False
@@ -18,7 +18,7 @@ def check_answer(number_1, number_2, answer, name):
 def play_gcd():
     print('Welcome to the Brain Games!')
     user_name = utils.get_name()
-    print(f'Hello, {user_name}!')
+    print(f"Hello, {user_name}!")
     print('Find the greatest common divisor of given numbers.')
     win_game = True
 
