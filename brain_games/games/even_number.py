@@ -12,7 +12,7 @@ def check_answer(number, answer, name):
     else:
         print(
             f"'{answer}' is the wrong answer ;(. Correct answer was "
-            f"{'yes' if utils.is_even(number) else 'no'}. \nLet's try again, "
+            f"'{'yes' if utils.is_even(number) else 'no'}'. \nLet's try again, "
             f"{name}!"
         )
         return False
