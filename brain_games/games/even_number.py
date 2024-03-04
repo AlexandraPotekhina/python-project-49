@@ -1,38 +1,10 @@
-from brain_games.games import utils
+from brain_games.games.utils import generate_num, is_even
 
 
-def check_answer(number, answer, name):
-    if (
-        (utils.is_even(number) and (answer == 'yes'))
-        or (not utils.is_even(number) and (answer == 'no'))
-    ):
-        print("Correct!")
-        return True
+RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-    else:
-        print(
-            f"'{answer}' is the wrong answer ;(. Correct answer was "
-            f"'{'yes' if utils.is_even(number) else 'no'}'. \nLet's try again, "
-            f"{name}!"
-        )
-        return False
-
-
-def play_game():
-    print('Welcome to the Brain Games!')
-    user_name = utils.get_name()
-    print(f"Hello, {user_name}!")
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    win_game = True
-
-    for i in range(3):
-        number = utils.generate_num()
-        print(f"Question: {number}")
-        user_answer = utils.get_answer()
-
-        if not check_answer(number, user_answer, user_name):
-            win_game = False
-            break
-
-    if win_game:
-        print(f"Congratulations, {user_name}!")
+def evaluate():
+    number = generate_num()
+    question = f"{number}"
+    answer = 'yes' if is_even(number) else 'no'
+    return (question, answer)

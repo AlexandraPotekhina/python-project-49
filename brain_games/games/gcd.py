@@ -1,36 +1,11 @@
-from brain_games.games import utils
+from brain_games.games.utils import generate_num, find_gcd
 
 
-def check_answer(number_1, number_2, answer, name):
-    if str(utils.find_gcd(number_1, number_2)) == answer:
-        print("Correct!")
-        return True
+RULE = 'Find the greatest common divisor of given numbers.'
 
-    else:
-        print(
-            f"'{answer}' is the wrong answer ;(. Correct answer was "
-            f"'{utils.find_gcd(number_1, number_2)}'. \nLet's try again, "
-            f"{name}!"
-        )
-        return False
-
-
-def play_gcd():
-    print('Welcome to the Brain Games!')
-    user_name = utils.get_name()
-    print(f"Hello, {user_name}!")
-    print('Find the greatest common divisor of given numbers.')
-    win_game = True
-
-    for i in range(3):
-        number_1 = utils.generate_num()
-        number_2 = utils.generate_num()
-        print(f"Question: {number_1, number_2}")
-        user_answer = utils.get_answer()
-
-        if not check_answer(number_1, number_2, user_answer, user_name):
-            win_game = False
-            break
-
-    if win_game:
-        print(f"Congratulations, {user_name}!")
+def evaluate():
+    num1 = generate_num()
+    num2 = generate_num()
+    question = f"{num1}, {num2}"
+    answer = str(find_gcd(num1, num2))
+    return (question, answer)
