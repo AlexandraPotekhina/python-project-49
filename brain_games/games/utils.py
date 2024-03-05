@@ -29,17 +29,17 @@ def find_gcd(number_1, number_2):
 
 
 def generate_progression():
-    regression = [random.randint(1, 10)]
-    rand_num = random.randint(1, 5)
+    progression = list(random.randint(1, 10))
+    rand_num = random.randint(1, 10)
 
-    for i in range(11):
-        regression.append(regression[i] + rand_num)
+    for i in range(9):
+        progression.append(progression[-1] + rand_num)
 
-    missing_number = random.choice(regression)
-    index = regression.index(missing_number)
-    regression[index] = '..'
+    missing_number = random.choice(progression)
+    index = progression.index(missing_number)
+    progression[index] = '..'
 
-    return (regression, missing_number)
+    return (progression, missing_number)
 
 
 def is_prime(number):
