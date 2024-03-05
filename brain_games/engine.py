@@ -31,4 +31,3 @@ def play(game):
 
     if win_game:
         print(f"Congratulations, {user_name}!")
-        
