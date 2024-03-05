@@ -45,7 +45,7 @@ def generate_progression():
 def is_prime(number):
     if number < 2:
         return False
-    
+
     if number == 2:
         return True
 

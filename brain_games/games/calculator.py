@@ -11,6 +11,7 @@ operations = {'+': operator.add,
               '*': operator.mul
               }
 
+
 def evaluate():
     operation = choice(list(operations.keys()))
     num1 = generate_num()

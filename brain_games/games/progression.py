@@ -3,6 +3,7 @@ from brain_games.games.utils import generate_progression
 
 RULE = 'What number is missing in the progression?'
 
+
 def evaluate():
     progression, missing_number = generate_progression()
     question = f"Question: {' '.join(map(str, progression))}"

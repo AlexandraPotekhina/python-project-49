@@ -20,7 +20,7 @@ def play(game):
     print(game.RULE)
     win_game = True
 
-    for i in range(3): #NUMBER_OF_ROUNDS = 3 in engine or utils
+    for i in range(3):  # NUMBER_OF_ROUNDS = 3 in engine or utils
         question, correct_answer = game.evaluate()
         print(question)
         user_answer = get_answer()
@@ -31,3 +31,4 @@ def play(game):
 
     if win_game:
         print(f"Congratulations, {user_name}!")
+        
