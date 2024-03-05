@@ -22,7 +22,7 @@ def play(game):
 
     for i in range(3): #NUMBER_OF_ROUNDS = 3 in engine or utils
         question, correct_answer = game.evaluate()
-        print(f"Question: {question}")
+        print(question)
         user_answer = get_answer()
 
         if not check(correct_answer, user_answer, user_name):

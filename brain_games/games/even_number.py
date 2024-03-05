@@ -5,6 +5,6 @@ RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 def evaluate():
     number = generate_num()
-    question = f"{number}"
+    question = f"Question: {number}"
     answer = 'yes' if is_even(number) else 'no'
     return (question, answer)

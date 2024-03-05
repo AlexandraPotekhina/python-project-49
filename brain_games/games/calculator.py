@@ -15,6 +15,6 @@ def evaluate():
     operation = choice(list(operations.keys()))
     num1 = generate_num()
     num2 = generate_num()
-    question = f"{num1} {operation} {num2}"
+    question = f"Question: {num1} {operation} {num2}"
     answer = str(operations[operation](num1, num2))
     return (question, answer)
