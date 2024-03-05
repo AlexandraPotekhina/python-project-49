@@ -29,7 +29,7 @@ def find_gcd(number_1, number_2):
 
 
 def generate_progression():
-    progression = list(random.randint(1, 10))
+    progression = [random.randint(1, 10)]
     rand_num = random.randint(1, 10)
 
     for i in range(9):
